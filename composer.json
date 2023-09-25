@@ -1,0 +1,51 @@
+{
+    "name": "forest-lynx/laravel-livewire-form-db",
+    "description": "Формирование класса Form для Livewire  с добавлением полей.",
+    "homepage": "https://github.com/forest-lynx/laravel-livewire-form-db",
+    "keywords": [
+        "livewire",
+        "laravel"
+    ],
+    "minimum-stability": "dev",
+    "version": "0.0.1",
+    "type": "laravel-package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ForestLynx\\FormDB\\": "./src"
+        }
+    },
+    "autoload-dev": {},
+    "authors": [
+        {
+            "name": "Дмитрий",
+            "email": "trot505@yandex.ru",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/prompts": "^0.1",
+        "livewire/livewire": "^3.0",
+        "illuminate/contracts": "^9.0 || ^10.0",
+        "illuminate/support": "^9.0 || ^10.0",
+        "illuminate/database": "^9.0 || ^10.0",
+        "illuminate/testing": "^9.0 || ^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.5"
+    },
+    "extra": {
+        "laravel": {
+                "providers": [
+                    "ForestLynx\\FormDB\\Providers\\PackagesServiceProvider"
+                ]
+            }
+        },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "prefer-stable": true
+}

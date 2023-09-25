@@ -1,0 +1,60 @@
+<?php
+
+namespace {namespace};
+
+
+use ForestLynx\FormDB\Field;
+use ForestLynx\FormDB\FormDB;
+use Livewire\Attributes\Rule;
+use Illuminate\Support\Carbon;
+use Livewire\Attributes\Locked;
+use Illuminate\Support\Collection;
+use Illuminate\Database\Eloquent\Model;
+
+class {class} extends FormDB
+{
+    // Поля формы
+{fields}
+
+    /**
+     * Свойства формы которые необходимо пропустить при ее отображении
+     * @return array
+     */
+    #[Locked]
+    public function skippedProperties(): array{
+        return [];
+    }
+
+    /**
+     * Не редактируемые свойства формы но отображаемые
+     * @return array
+     */
+    #[Locked]
+    public function getInfoFields(): array{
+        return [];
+    }
+
+    /**
+     * Сведения о полях формы, их типах, описании, и пр.
+     * для формирования html формы
+     * @return Collection<ForextLunx\FormDB\Field>
+     */
+    #[Locked]
+    public function formFields(): Collection{
+        return \collect([
+{fields_data}
+        ]);
+    }
+
+    /**
+     * Определение свойств класса формы при инициализации
+     *
+     * @param Model $model
+     * @return void
+     */
+    #[Locked]
+    public function setForm(Model $model): void{
+
+    }
+
+}
